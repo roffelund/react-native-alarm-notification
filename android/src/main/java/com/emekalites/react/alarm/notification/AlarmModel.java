@@ -34,7 +34,8 @@ public class AlarmModel implements Serializable {
     private String data;
     private boolean loopSound = false;
     private boolean useBigText = false;
-    private boolean hasButton = false;
+    private boolean dismissButton = false;
+    private boolean snoozeButton = false;
 
     private int active = 1;         // 1 = yes, 0 = no
 
@@ -270,12 +271,21 @@ public class AlarmModel implements Serializable {
         this.useBigText = useBigText;
     }
 
-    public boolean isHasButton() {
-        return hasButton;
+
+    public boolean isDismissButton() {
+        return dismissButton;
     }
 
-    public void setHasButton(boolean hasButton) {
-        this.hasButton = hasButton;
+    public void setDismissButton(boolean dismissButton) {
+        this.dismissButton = dismissButton;
+    }
+
+    public boolean isSnoozeButton() {
+        return snoozeButton;
+    }
+
+    public void setSnoozeButton(boolean snoozeButton) {
+        this.snoozeButton = snoozeButton;
     }
 
     @Override
@@ -309,7 +319,8 @@ public class AlarmModel implements Serializable {
                 ", data='" + data + '\'' +
                 ", loopSound=" + loopSound +
                 ", useBigText=" + useBigText +
-                ", hasButton=" + hasButton +
+                ", dismissButton=" + dismissButton +
+                ", snoozeButton=" + snoozeButton +
                 ", active=" + active +
                 '}';
     }

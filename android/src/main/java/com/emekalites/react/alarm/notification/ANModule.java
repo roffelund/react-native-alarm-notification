@@ -76,7 +76,8 @@ public class ANModule extends ReactContextBaseJavaModule {
         alarm.setTicker(bundle.getString("ticker", ""));
         alarm.setTitle(bundle.getString("title", "My Notification Title"));
         alarm.setVibrate(bundle.getBoolean("vibrate", true));
-        alarm.setHasButton(bundle.getBoolean("has_button", false));
+        alarm.setSnoozeButton(bundle.getBoolean("snooze_button", false));
+        alarm.setDismissButton(bundle.getBoolean("dismiss_button", false));
         alarm.setVibration(bundle.getInt("vibration", 100));
         alarm.setUseBigText(bundle.getBoolean("use_big_text", false));
 
@@ -158,7 +159,8 @@ public class ANModule extends ReactContextBaseJavaModule {
         alarm.setTicker(bundle.getString("ticker"));
         alarm.setTitle(bundle.getString("title", "My Notification Title"));
         alarm.setVibrate(bundle.getBoolean("loop_sound", true));
-        alarm.setHasButton(bundle.getBoolean("has_button", false));
+        alarm.setSnoozeButton(bundle.getBoolean("snooze_button", false));
+        alarm.setDismissButton(bundle.getBoolean("dismiss_button", false));
         alarm.setVibration(bundle.getInt("vibration", 100));
         alarm.setUseBigText(bundle.getBoolean("use_big_text", false));
         
